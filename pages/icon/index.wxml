@@ -1,0 +1,12 @@
+<!--pages/icon/index.wxml-->
+<view class='searchView'>
+  <x-search placeholder='搜索图片，文章，视频' searchIconName='search' bindonInput='onInput' bindonConfirm='onConfirm'>
+  <image slot='searchHead' src='/static/logo.png'></image>
+</x-search>
+</view>
+<view class='bodyView'>
+  <view class='view' wx:for="{{icon}}" wx:key='{{index}}' wx:if='{{item.isShow}}'>
+    <view><x-icon name='{{item.name}}' color='{{item.color}}' size='56' rotate='{{item.rotate}}'></x-icon></view>
+    <view>{{item.name}}</view>
+  </view>
+</view>
